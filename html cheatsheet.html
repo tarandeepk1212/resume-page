@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Cheat Sheet</title>
+  <link href="https://fonts.googleapis.com/css?family=Cherry+Swash" rel="stylesheet">
+  <style>
+    body {
+      color: #222;
+      font-family: Arial, sans-serif;
+    }
+
+    .max-width {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-family: 'Cherry Swash';
+      font-size: 40px;
+    }
+
+    h2 {
+      color: #aaa;
+      border-bottom: 1px dashed #aaa;
+      border-top: 1px dashed #aaa;
+      padding: 8px;
+      font-weight: 400;
+    }
+
+    h3 {
+      color: #4cacbe;
+    }
+
+    code {
+      background: #eee;
+      padding: 3px 8px;
+      display: inline-block;
+      clear: both;
+      border-radius: 3px;
+      color: brown;
+      width: auto;
+      clear: both;
+      margin-bottom: 5px;
+    }
+
+    dt {
+      margin-bottom: 10px;
+    }
+
+    dt:not(:first-child) {
+      padding-top: 20px;
+    }
+
+    dd {
+      line-height: 1.64em;
+      border-left: 1px dashed #aaa;
+      margin-left: 20px;
+      padding-left: 20px;
+    }
+
+    .example {
+      padding-top: 20px;
+      position: relative;
+    }
+
+    .example:before {
+      content: 'Example:';
+      font-size: .8em;
+      font-weight: 700;
+      position: absolute;
+      top: 0;
+    }
+
+    @media screen {
+      .print-footer,
+      .print-header {
+        display: none;
+      }
+    }
+
+    @media print {
+      body {
+        font-size: 14px;
+      }
+
+      h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+
+      body {
+        font-size: 11pt;
+      }
+
+      h1 {
+        font-size: 24pt;
+        margin-bottom: .5em;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #333;
+      }
+
+      h2,
+      h3 {
+        font-style: 12pt;
+      }
+
+      code {
+        color: #333;
+        border: 1px dashed #aaa;
+      }
+
+      section {
+        page-break-inside: avoid;
+      }
+
+      .max-width {
+        margin: .5cm;
+      }
+
+      .print-footer {
+        font-size: 10pt;
+        margin-bottom: 0px;
+      }
+
+      .print-left {
+        width: 30%;
+        float: left;
+      }
+
+      .print-right {
+        width: 30%;
+        float: right;
+        text-align: right;
+        font-style: italic;
+      }
+
+      .print-center {
+        width: 40%;
+        float: left;
+        text-align: center;
+      }
+
+      .print-header {
+        margin-bottom: .5em;
+        margin-top: 0;
+      }
+
+      .print-page-1 {
+        margin-top: 3cm;
+        page-break-after: always;
+      }
+
+      .print-page-2 {
+        margin-top: 2.25cm;
+        page-break-after: always;
+      }
+
+      .print-page-3 {
+        margin-top: 4.5cm;
+        page-break-after: always;
+      }
+
+      #print-page-4 {
+        margin-top: 1cm;
+        margin-bottom: 0;
+        page-break-after: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="max-width">
+    <h1>HTML Cheat Sheet</h1>
+
+    <h3 id="basicTags">Basic Tags</h3>
+
+    <dl>
+      <dt>
+        <code>&lt;html&gt;&lt;/html&gt;</code>
+      </dt>
+      <dd>The HTML tag creates an HTML document.</dd>
+
+      <dt>
+        <code>&lt;head&gt;&lt;/head&gt;</code>
+      </dt>
+      <dd>The head tag holds information about the website as well as links to external resources.</dd>
+
+      <dt>
+        <code>&lt;body&gt;&lt;/body&gt;</code>
+      </dt>
+      <dd>The body tag holds the visible portion of the document. This is where your content will live.</dd>
+
+      <dt>
+        <code>&lt;div&gt;&lt;/div&gt;</code>
+      </dt>
+      <dd>The div tag creates a block container element.</dd>
+
+      <dt>
+        <code>&lt;span&gt;&lt;/span&gt;</code>
+      </dt>
+      <dd>The div tag creates an inline container element.</dd>
+    </dl>
+
+    <h3 id="image">Images</h3>
+
+    <dl>
+      <dt>
+        <code>&lt;img /&gt;</code>
+      </dt>
+      <dd>The image tag, or img tag, is used to display an image.
+        Requires the <code>src</code> attribute, which identifies the source of the image
+        and the <code>alt</code> attribute, which provides alternative text. This is a self-closing tag.</dd>
+      <dd class="example"><code>&lt;img src="image.jpg" alt="Image Description" /&gt;</code></dd>
+
+    </dl>
+    <div class="print-footer" id="print-page-4">
+      <p class="print-left"> &copy; Sparkbox 2016 </p>
+      <p class="print-center"> Page 4 of 4 </p>
+      <p class="print-right"> gswo.seesparkbox.com </p>
+    </div>
+  </div>
+  <div class="max-width">
+  <h3 id="links">Links</h3>
+
+      <dl>
+        <dt>
+          <code>&lt;a&gt;&lt;/a&gt;</code>
+        </dt>
+        <dd>The a tag, or anchor tag, creates a link. Requires the <code>href</code> attribute, which tells the link where to go. May include the <code>title</code> attribute, which provides additional information about the link.</dd>
+        <dd class="example"><code>&lt;a href="http://website.com" title="Link Description"&gt;Clickable Text&lt;/a&gt;</code></dd>
+      </dl>
+
+      <h3 id="textFormatting">Text Formatting</h3>
+
+      <dl>
+        <dt>
+          <code>&lt;h1&gt;&lt;/h1&gt;</code><br />
+          <code>&lt;h2&gt;&lt;/h2&gt;</code><br />
+          <code>&lt;h3&gt;&lt;/h3&gt;</code><br />
+          <code>&lt;h4&gt;&lt;/h4&gt;</code><br />
+          <code>&lt;h5&gt;&lt;/h5&gt;</code><br />
+          <code>&lt;h6&gt;&lt;/h6&gt;</code>
+        </dt>
+        <dd>Heading tags create a hierarchy of headings with <code>h1</code> being the largest and <code>h6</code> being the smallest.</dd>
+        <dd class="example"><code>&lt;h1&gt;Heading Text&lt;/h1&gt;</code></dd>
+
+        <dt>
+          <code>&lt;em&gt;&lt;/em&gt;</code>
+        </dt>
+        <dd>Adds emphasis to a word (italic).</dd>
+        <dd class="example"><code>&lt;em&gt;Italicized Text&lt;/em&gt;</code></dd>
+
+        <div class="print-footer print-page-2">
+          <p class="print-left"> &copy; Sparkbox 2016 </p>
+          <p class="print-center"> Page 2 of 4 </p>
+          <p class="print-right"> gswo.seesparkbox.com </p>
+        </div>
+
+        <h3 id="textFormatting" class="print-header">Text Formatting, Continued</h3>
+
+        <dt>
+          <code>&lt;strong&gt;&lt;/strong&gt;</code>
+        </dt>
+        <dd>Adds emphasis to a word (bold).</dd>
+        <dd class="example"><code>&lt;strong&gt;Bold Text&lt;/strong&gt;</code></dd>
+
+        <dt>
+          <code>&lt;p&gt;&lt;/p&gt;</code>
+        </dt>
+        <dd>A paragraph tag or p tag creates a paragraph element.</dd>
+        <dd class="example"><code>&lt;p&gt;A paragraph of text. Chupa chups topping cake tiramisu liquorice sweet roll brownie. Jelly souffle bear claw. Carrot cake jujubes chupa chups oat cake tart.&lt;/p&gt;</code></dd>
+
+        <dt>    <code>&lt;blockquote&gt;&lt;/blockquote&gt;</code>
+        </dt>
+        <dd>For quotes, indents text from both sides.</dd>
+        <dd class="example"><code>&lt;blockquote&gt;A text quote. Chupa chups topping cake tiramisu liquorice sweet roll brownie. Jelly souffle bear claw. Carrot cake jujubes chupa chups oat cake tart.&lt;/blockquote&gt;</code></dd>
+
+        <dt>
+          <code>&lt;li&gt;&lt;/li&gt;</code>
+        </dt>
+        <dd>Creates a list item. Used in either an ordered lists or an unordered lists.</dd>
+        <dd class="example"><code>&lt;li&gt;List Item&lt;/li&gt;</code></dd>
+
+        <div class="print-footer print-page-3">
+          <p class="print-left"> &copy; Sparkbox 2016 </p>
+          <p class="print-center"> Page 3 of 4 </p>
+          <p class="print-right"> gswo.seesparkbox.com </p>
+        </div>
+        <h3 id="textFormatting" class="print-header">Text Formatting, Continued</h3>
+
+        <dt>
+          <code>&lt;ol&gt;&lt;/ol&gt;</code>
+        </dt>
+        <dd>An ordered list, creates a numbered list.</dd>
+        <dd class="example">
+          <code>
+            &lt;ol&gt;<br />
+            &nbsp;&nbsp;&lt;li&gt;List Item&lt;/li&gt;<br />
+            &nbsp;&nbsp;&lt;li&gt;List Item&lt;/li&gt;<br />
+            &lt;/ol&gt;
+          </code>
+        </dd>
+
+        <dt>
+          <code>&lt;ul&gt;&lt;/ul&gt;</code>
+        </dt>
+        <dd>An unordered list, creates a bulleted list.</dd>
+        <dd class="example">
+          <code>
+            &lt;ul&gt;<br />
+            &nbsp;&nbsp;&lt;li&gt;List Item&lt;/li&gt;<br />
+            &nbsp;&nbsp;&lt;li&gt;List Item&lt;/li&gt;<br />
+            &lt;/ul&gt;
+          </code>
+        </dd>
+
+        <dt>
+          <code>&lt;br /&gt;</code>
+        </dt>
+        <dd>A break tag inserts a line break in a chunk of text. Often used inside of a paragraph tag. This is a self-closing tag.</dd>
+        <dd class="example"><code>&lt;p&gt;A paragraph of text&lt;br /&gt;<br />
+        split into two lines.&lt;/p&gt;</code></dd>
+
+        <dt>
+          <code>&lt;hr /&gt;</code>
+        </dt>
+        <dd>A horizontal tag inserts a horizontal rule (line). This is a self-closing tag.</dd>
+        <dd class="example"><code>&lt;p&gt;A paragraph of text<br />
+          &lt;hr /&gt;<br />
+        split into two lines with a line between them.&lt;/p&gt;</code></dd>
+      </dl>
+
+      <div class="print-footer" id="print-page-4">
+        <p class="print-left"> &copy; Sparkbox 2016 </p>
+        <p class="print-center"> Page 4 of 4 </p>
+        <p class="print-right"> gswo.seesparkbox.com </p>
+</body>
+
+</html>
